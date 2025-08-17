@@ -1,12 +1,13 @@
 import { Marquee } from "~/components/ui/marquee";
 import Image from "next/image";
-import gumi from "public/logos/gum-logo.png";
 import a16z from "public/logos/a16z.svg";
 import antler from "public/logos/antler.svg";
 import bigIdeas from "public/logos/big-ideas.png";
 import costanoa from "public/logos/costanoa-vc.svg";
 import courtyardVentures from "public/logos/courtyard-ventures.png";
 import futurexcapital from "public/logos/futurexcapital.png";
+import gumi from "public/logos/gum-logo.png";
+import haas from "public/logos/haas_entr.png";
 import mercury from "public/logos/mercury.svg";
 import microsoft from "public/logos/microsoft.png";
 import nfx from "public/logos/nfx.svg";
@@ -16,7 +17,6 @@ import skydeck from "public/logos/skydeck.png";
 import theHouseFund from "public/logos/the-house-fund.svg";
 import unusualVentures from "public/logos/unusual-ventures.svg";
 import yCombinator from "public/logos/y-combinator.svg";
-import haas from "public/logos/haas_entr.png";
 
 export const Logos = () => (
   <section className="border-foreground/10 mt-28 border-b border-dashed pb-6 md:mt-36 lg:mt-24">
