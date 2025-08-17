@@ -1,4 +1,4 @@
-import { buttonVariants, type Button } from "~/components/ui/button";
+import { buttonVariants, type Button } from "~/components/ui/primitives/button";
 import { cn } from "~/lib/utils";
 import {
   ChevronLeftIcon,
