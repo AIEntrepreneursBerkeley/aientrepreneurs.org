@@ -1,11 +1,12 @@
 import { NavigationMenuComponent } from "~/components/ui/navigation-menu";
 import { Button } from "~/components/ui/primitives/button";
+import { SignIn } from "~/components/ui/sign-in";
 import Image from "next/image";
 import Link from "next/link";
 import aieb from "public/logos/aieb.svg";
 
 export const Navbar = () => (
-  <header className="sticky top-0 z-50 border-b border-gray-400/50 bg-gray-100/50 py-0.5 backdrop-blur-md backdrop-saturate-200 dark:border-gray-700/50 dark:bg-gray-900/50">
+  <header className="sticky top-0 z-50 border-b border-gray-400 bg-gray-100/50 py-0.5 backdrop-blur-lg backdrop-hue-rotate-30 backdrop-saturate-200 dark:border-gray-100/60 dark:bg-gray-900/50">
     <nav className="container flex h-16 items-center justify-between lg:h-20">
       <figure className="relative h-full">
         <Link href="/">
@@ -22,6 +23,7 @@ export const Navbar = () => (
         <Link href="/apply">
           <Button variant="default">Apply</Button>
         </Link>
+        <SignIn />
       </div>
     </nav>
   </header>

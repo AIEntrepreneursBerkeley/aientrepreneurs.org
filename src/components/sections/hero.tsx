@@ -1,5 +1,6 @@
 import { Lines } from "~/components/sections/lines";
 import { Logos } from "~/components/sections/logos";
+import { CountUp } from "~/components/ui/count-up";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -34,19 +35,19 @@ export const Hero = () => (
         <div className="mt-12 flex max-w-lg justify-between md:max-w-xl">
           <div>
             <span className="block text-3xl font-semibold md:text-4xl lg:text-5xl">
-              80
+              <CountUp to={80} />
             </span>
             Startups
           </div>
           <div className="">
             <span className="block text-3xl font-semibold md:text-4xl lg:text-5xl">
-              38
+              <CountUp to={38} />
             </span>
             VC Partners
           </div>
           <div>
             <span className="block text-3xl font-semibold md:text-4xl lg:text-5xl">
-              2955
+              <CountUp to={2955} />
             </span>
             Attendees
           </div>
