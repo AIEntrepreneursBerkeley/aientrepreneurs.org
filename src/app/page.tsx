@@ -15,9 +15,9 @@ const Home = async () => {
       <Announcement />
       <Layout>
         <Hero />
-        <div style={{ width: "90%", height: "1000px", position: "relative" }}>
+        <div className="relative container h-[1000px] px-0">
           <Prism
-            animationType="hover"
+            animationType="3drotate"
             timeScale={0.5}
             height={3.5}
             baseWidth={5}

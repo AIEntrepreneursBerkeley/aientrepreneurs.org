@@ -53,8 +53,6 @@
 
   --shadow-border: inset 0 0 0 1px hsla(240, 60%, 95%, 0.15);
 
-  --color-background: #040410;
-
   --font-sans:
     var(--font-inter), ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
@@ -478,7 +476,7 @@
     @apply shadow-xl;
   }
   &:hover {
-    @apply bg-gray-900/90;
+    @apply bg-gray-600/30;
   }
   display: flex;
   align-items: center;
@@ -547,7 +545,7 @@
 }
 
 @utility navigation-menu-viewport {
-  @apply z-40 mt-[15px] border border-gray-700 bg-gray-900/95 backdrop-blur-xs lg:mt-[23px];
+  @apply z-40 mt-[15px] border border-gray-700 bg-gray-700/90 backdrop-blur-xl lg:mt-[23px];
   position: relative;
   transform-origin: top center;
   width: 100%;
@@ -685,7 +683,7 @@
 @utility arrow {
   position: relative;
   top: 0;
-  @apply h-[14px] w-[14px] rounded-tl-sm border-t border-l border-gray-700 bg-gray-900/95 sm:h-4 sm:w-4 sm:rounded-tl-[3px] md:rounded-tl-[4px] lg:h-5 lg:w-5 lg:rounded-tl-md;
+  @apply h-[14px] w-[14px] rounded-tl-sm border-t border-l border-gray-700 bg-gray-700/80 sm:h-4 sm:w-4 sm:rounded-tl-[3px] md:rounded-tl-[4px] lg:h-5 lg:w-5 lg:rounded-tl-md;
   transform: rotate(45deg);
 }
 
