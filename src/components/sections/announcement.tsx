@@ -1,6 +1,6 @@
 export const Announcement = () => (
   <section>
-    <div className="overflow-hidden border-b border-gray-100/60 bg-gradient-to-r from-emerald-600 to-teal-600 px-2 py-1.5">
+    <div className="overflow-hidden border-b border-gray-100/60 bg-gradient-to-r from-emerald-500 to-teal-600 px-2 py-1.5">
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <svg
           fill="none"
