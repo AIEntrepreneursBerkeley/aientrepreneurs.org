@@ -9,7 +9,6 @@ export const IncubatorIntro = () => (
   <section className="relative py-24 sm:py-28 md:py-32">
     <div className="bg-stripe-gradient absolute top-0 -z-10 h-full w-full scale-y-[200%]" />
     <div className="container">
-      {/* Header */}
       <div className="mx-auto max-w-4xl text-center">
         <Badge variant="secondary" className="mb-6">
           <Zap className="mr-2 h-4 w-4" />
@@ -28,7 +27,6 @@ export const IncubatorIntro = () => (
         </p>
       </div>
 
-      {/* Stats */}
       <div className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-4">
         <div className="text-center">
           <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">
@@ -66,7 +64,6 @@ export const IncubatorIntro = () => (
         </div>
       </div>
 
-      {/* Program Features */}
       <div className="mt-20 grid gap-8 lg:grid-cols-3">
         <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-blue-50 to-indigo-50 p-8 shadow-lg transition-all duration-300 hover:shadow-xl dark:from-blue-950/50 dark:to-indigo-950/50">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -113,7 +110,6 @@ export const IncubatorIntro = () => (
         </Card>
       </div>
 
-      {/* Program Structure */}
       <div className="mt-20">
         <div className="mx-auto max-w-4xl text-center">
           <h3 className="mb-8 text-3xl font-bold tracking-tight sm:text-4xl">
@@ -168,7 +164,6 @@ export const IncubatorIntro = () => (
         </div>
       </div>
 
-      {/* CTA Section */}
       <div className="mt-20 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 p-8 text-center text-white md:p-12">
         <h3 className="mb-4 text-3xl font-bold sm:text-4xl">
           Ready to Build the Future?
