@@ -30,6 +30,7 @@ export const Card = ({ name, image, position, linkedin }: CardProps) => {
         href={linkedin.replaceAll(/<[^>]*>/g, "")}
         target="_blank"
         rel="noreferrer"
+        className="text-gray-200"
       >
         <div className="card" ref={card}>
           <div className="avatar">

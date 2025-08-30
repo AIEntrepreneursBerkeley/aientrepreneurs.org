@@ -20,7 +20,7 @@ export const CTA = () => (
         />
         <div className="absolute inset-0 flex items-center justify-center">
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeczWIYO9PKcUJVRSHdIt4z6mt2XkQ2lgcBySjiA5IdLnxoWA/viewformg"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeczWIYO9PKcUJVRSHdIt4z6mt2XkQ2lgcBySjiA5IdLnxoWA/viewform"
             target="_blank"
           >
             <CircularText
