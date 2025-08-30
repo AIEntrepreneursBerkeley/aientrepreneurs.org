@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "~/lib/utils";
 import { Mesh, Program, Renderer, Triangle } from "ogl";
 import React, { useEffect, useRef } from "react";
 
@@ -19,6 +20,7 @@ type PrismProps = {
   bloom?: number;
   suspendWhenOffscreen?: boolean;
   timeScale?: number;
+  className?: string;
 };
 
 export const Prism: React.FC<PrismProps> = ({
@@ -37,6 +39,7 @@ export const Prism: React.FC<PrismProps> = ({
   bloom = 1,
   suspendWhenOffscreen = false,
   timeScale = 0.5,
+  className = "",
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -474,5 +477,10 @@ export const Prism: React.FC<PrismProps> = ({
     suspendWhenOffscreen,
   ]);
 
-  return <div className="relative h-full w-full" ref={containerRef} />;
+  return (
+    <div
+      ref={containerRef}
+      className={cn("relative h-full w-full", className)}
+    />
+  );
 };

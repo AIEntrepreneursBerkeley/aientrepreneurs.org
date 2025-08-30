@@ -1,5 +1,8 @@
+import Image from "next/image";
+import ocf from "public/logos/ocf.png";
+
 export const Footer = () => (
-  <footer className="bg-opacity-50 justify-center py-10 backdrop-blur-md backdrop-saturate-20">
+  <footer className="mb-24">
     <div className="flex w-full justify-center">
       <a
         className="px-2"
@@ -40,13 +43,9 @@ export const Footer = () => (
       </p>
     </div>
 
-    <div className="mt-5 mr-8 flex justify-end">
-      <a href="https://www.ocf.berkeley.edu">
-        <img
-          className="w-20"
-          src="http://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin-dark.svg"
-          alt="Hosted by the OCF"
-        />
+    <div className="mt-6 flex w-full justify-center">
+      <a href="https://www.ocf.berkeley.edu" className="block">
+        <Image src={ocf} alt="Hosted by the OCF" className="h-8 w-auto" />
       </a>
     </div>
   </footer>

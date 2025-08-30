@@ -1,7 +1,7 @@
 export const Announcement = () => (
   <section>
-    <div className="overflow-hidden border-b border-gray-100/60 bg-gradient-to-r from-emerald-500 to-teal-600 px-2 py-1.5">
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="overflow-hidden border-b border-gray-100/60 bg-gradient-to-r from-emerald-500 to-teal-500 px-2 py-1.5">
+      <div className="max-w-8xl relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <svg
           fill="none"
           viewBox="0 0 848 513"
@@ -167,8 +167,14 @@ export const Announcement = () => (
       </div>
       <div className="relative z-50">
         <div className="text-center">
-          <a className="inline-block w-full text-xs font-medium text-white transition-colors hover:text-gray-200 sm:text-sm">
-            <span className="font-bold">Join the Community &rarr;</span>
+          <a
+            className="inline-block w-full text-xs font-medium text-white transition-colors hover:text-gray-200 sm:text-sm"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeczWIYO9PKcUJVRSHdIt4z6mt2XkQ2lgcBySjiA5IdLnxoWA/viewform"
+            target="_blank"
+          >
+            <span className="font-bold">
+              Fall 2025 Application is now open &rarr;
+            </span>
           </a>
         </div>
       </div>

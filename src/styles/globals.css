@@ -63,6 +63,8 @@
     serif;
 
   --breakpoint-xs: 540px;
+
+  --spacing-8xl: 88rem;
 }
 
 @theme inline {
@@ -196,10 +198,14 @@
   p {
     @apply text-lg leading-snug lg:text-xl;
   }
+
+  a {
+    @apply text-blue-600 transition-colors hover:text-blue-400;
+  }
 }
 
 @utility container {
-  @apply mx-auto max-w-7xl px-4 md:px-6;
+  @apply max-w-8xl mx-auto px-4 md:px-6;
 }
 
 @utility marquee {
@@ -428,9 +434,9 @@
   background-image: linear-gradient(
     6deg,
     transparent 25.60739517211914%,
-    rgba(85, 238, 230, 0.15) 42.41046905517578%,
-    rgba(0, 170, 240, 0.22) 52.1204948425293%,
-    rgba(175, 141, 255, 0.23) 61.8046760559082%,
+    rgba(85, 238, 230, 0.25) 42.41046905517578%,
+    rgba(0, 170, 240, 0.37) 52.1204948425293%,
+    rgba(175, 141, 255, 0.38) 61.8046760559082%,
     transparent 75.95748901367188%
   );
 }
@@ -617,6 +623,7 @@
   border-radius: 6px;
   font-size: 15px;
   line-height: 1;
+  @apply text-gray-200;
   &:hover {
     @apply bg-gray-900/90;
   }
@@ -631,6 +638,7 @@
 @utility list-item-text {
   line-height: 1.4;
   font-weight: initial;
+  @apply text-gray-200;
 }
 
 @utility callout {
@@ -796,6 +804,16 @@
 }
 
 @layer components {
+  .masonry-grid {
+    @apply max-w-8xl mx-auto flex w-auto gap-x-3.5 px-4;
+  }
+
+  .masonry-grid-column {
+    & > div {
+      @apply mb-3.5;
+    }
+  }
+
   @keyframes scroll-left {
     from {
       transform: translateX(0);

@@ -6,7 +6,7 @@ import { forwardRef } from "react";
 export const NavigationMenuComponent = () => (
   <NavigationMenu.Root className="navigation-menu-root">
     <NavigationMenu.List className="navigation-menu-list">
-      <NavigationMenu.Item>
+      {/* <NavigationMenu.Item>
         <NavigationMenu.Trigger className="navigation-menu-trigger">
           Program <ChevronDown className="caret-down" aria-hidden />
         </NavigationMenu.Trigger>
@@ -31,26 +31,26 @@ export const NavigationMenuComponent = () => (
             </ListItem>
           </ul>
         </NavigationMenu.Content>
-      </NavigationMenu.Item>
+      </NavigationMenu.Item> */}
 
       <NavigationMenu.Item>
         <NavigationMenu.Trigger className="navigation-menu-trigger">
           About <ChevronDown className="caret-down" aria-hidden />
         </NavigationMenu.Trigger>
         <NavigationMenu.Content className="navigation-menu-content">
-          <ul className="list two">
+          <ul className="list one">
             <ListItem title="Team" href="/team">
               Members and Advisors
             </ListItem>
             <ListItem title="FAQ" href="/faq">
               Frequently Asked Questions
             </ListItem>
-            <ListItem title="Blog" href="/blog">
+            {/* <ListItem title="Blog" href="/blog">
               Blog Posts
             </ListItem>
             <ListItem title="Portfolio" href="/portfolio">
               Builder's We've Backed
-            </ListItem>
+            </ListItem> */}
           </ul>
         </NavigationMenu.Content>
       </NavigationMenu.Item>

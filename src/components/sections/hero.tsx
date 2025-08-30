@@ -1,5 +1,6 @@
 import { Lines } from "~/components/sections/lines";
 import { Logos } from "~/components/sections/logos";
+import { Stories } from "~/components/sections/stories";
 import { CountUp } from "~/components/ui/count-up";
 import Image from "next/image";
 import Link from "next/link";
@@ -26,42 +27,49 @@ export const Hero = () => (
           </p>
           <p>
             Propel your startup to the next level.{" "}
-            <Link href="/apply" className="z-50 text-blue-500">
+            <a
+              target="_blank"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeczWIYO9PKcUJVRSHdIt4z6mt2XkQ2lgcBySjiA5IdLnxoWA/viewform"
+              className="z-50 text-blue-500"
+            >
               Apply
-            </Link>{" "}
+            </a>{" "}
             to our 10-week incubator today.
           </p>
         </div>
-        <div className="mt-12 flex max-w-lg justify-between md:max-w-xl">
+        <div className="mt-12 flex max-w-xl justify-between md:max-w-2xl">
           <div>
             <span className="block text-3xl font-semibold md:text-4xl lg:text-5xl">
-              <CountUp to={80} />
+              $<CountUp to={100} />
+              M+
             </span>
-            Startups
+            Combined Valuation
           </div>
           <div className="">
             <span className="block text-3xl font-semibold md:text-4xl lg:text-5xl">
-              <CountUp to={38} />
+              $<CountUp to={20} />
+              M+
             </span>
-            VC Partners
+            in Funding
           </div>
           <div>
             <span className="block text-3xl font-semibold md:text-4xl lg:text-5xl">
-              <CountUp to={2955} />
+              <CountUp to={3000} />+
             </span>
-            Attendees
+            Founders and Investors
           </div>
         </div>
       </div>
     </div>
     <Logos />
+    <Stories />
   </main>
 );
 
 const Background = () => (
   <div className="absolute inset-0 -top-16 -z-10 lg:-top-20">
     <div style={{ opacity: 1, transform: "none" }}>
-      <div className="absolute inset-x-0 top-0 max-w-7xl overflow-hidden lg:right-0 lg:bottom-auto lg:left-auto lg:w-4/5">
+      <div className="max-w-8xl absolute inset-x-0 top-0 overflow-hidden lg:right-0 lg:bottom-auto lg:left-auto lg:w-4/5">
         <div className="scale-[calc(16/9)] md:scale-100">
           <div className="flex aspect-square items-center md:aspect-video">
             <iframe
@@ -79,7 +87,7 @@ const Background = () => (
         <div className="to-background absolute -inset-px bg-gradient-to-b from-transparent via-transparent" />
         <div className="to-background absolute -inset-px hidden bg-gradient-to-l from-transparent via-transparent lg:block" />
       </div>
-      <div className="relative flex justify-center overflow-hidden saturate-50">
+      <div className="relative flex justify-center overflow-hidden saturate-200">
         <Image
           src="/images/gradient-small.webp"
           width={640}
