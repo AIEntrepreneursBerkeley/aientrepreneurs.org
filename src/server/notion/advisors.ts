@@ -4,9 +4,9 @@ import { env } from "~/env";
 export type Advisor = {
   id: string;
   name: string;
-  role?: string;
-  linkedinUrl?: string;
-  avatarUrl?: string;
+  roles: string[];
+  linkedin?: string;
+  images: string[];
 };
 
 const notion = env.NOTION_TOKEN ? new Client({ auth: env.NOTION_TOKEN }) : null;
@@ -25,6 +25,7 @@ type NotionPage = {
 type NotionProperty = {
   title?: Array<{ plain_text: string }>;
   rich_text?: Array<{ plain_text: string }>;
+  multi_select?: Array<{ name: string }>;
   url?: string;
   files?: Array<{
     file?: { url: string };
@@ -37,9 +38,6 @@ export async function fetchAdvisors(): Promise<Advisor[]> {
 
   const response = await notion.databases.query({
     database_id: env.NOTION_ADVISORS_DATABASE_ID,
-    filter: {
-      and: [],
-    },
     sorts: [
       {
         property: "Name",
@@ -50,7 +48,8 @@ export async function fetchAdvisors(): Promise<Advisor[]> {
 
   return (response.results as NotionPage[])
     .map((page) => mapAdvisor(page))
-    .filter((advisor): advisor is Advisor => advisor !== null);
+    .filter((advisor): advisor is Advisor => advisor !== null)
+    .filter((advisor) => advisor.roles.some((r) => r.includes("Advisor")));
 }
 
 function mapAdvisor(page: NotionPage): Advisor | null {
@@ -58,16 +57,25 @@ function mapAdvisor(page: NotionPage): Advisor | null {
     const props = page.properties ?? {};
     const name = props.Name?.title?.[0]?.plain_text ?? "";
     if (!name) return null;
-    const role = props.Role?.rich_text?.[0]?.plain_text ?? undefined;
-    const linkedinUrl = props.LinkedIn?.url ?? undefined;
-    // For avatar, prefer a Files property named "Avatar" else use the Notion icon
-    const file = props.Avatar?.files?.[0];
-    const avatarUrl =
-      file?.file?.url ??
-      file?.external?.url ??
-      page.icon?.external?.url ??
-      undefined;
-    return { id: page.id, name, role, linkedinUrl, avatarUrl };
+
+    const roles =
+      props.Role?.multi_select?.map((item) => item.name) ??
+      (props.Role?.rich_text?.[0]?.plain_text
+        ? [props.Role.rich_text[0].plain_text]
+        : []);
+
+    const linkedin = props.LinkedIn?.url ?? undefined;
+
+    const imageFiles = props.Image?.files ?? props.Avatar?.files ?? [];
+    const images = imageFiles
+      .map((file) => file?.file?.url ?? file?.external?.url)
+      .filter((url): url is string => Boolean(url));
+
+    if (images.length === 0 && page.icon?.external?.url) {
+      images.push(page.icon.external.url);
+    }
+
+    return { id: page.id, name, roles, linkedin, images };
   } catch {
     return null;
   }

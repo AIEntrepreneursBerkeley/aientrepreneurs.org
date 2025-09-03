@@ -1,5 +1,5 @@
 import { Layout } from "~/components/layouts/layout";
-import AdvisorsContentlayerSection from "~/components/sections/advisors-contentlayer";
+import AdvisorsSection from "~/components/sections/advisors";
 import { Lines } from "~/components/sections/lines";
 import Team from "~/components/sections/team";
 import Head from "next/head";
@@ -103,8 +103,7 @@ export default function EcosystemPage() {
               </div>
 
               <div className="mt-12">
-                {/* @ts-expect-error Server Component */}
-                <AdvisorsContentlayerSection />
+                <AdvisorsSection />
               </div>
             </div>
           </div>
@@ -149,7 +148,7 @@ export default function EcosystemPage() {
                         Directory Coming Soon
                       </h3>
                       <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-                        We're building out the full member directory
+                        We&apos;re building out the full member directory
                       </p>
                     </div>
                   </div>
