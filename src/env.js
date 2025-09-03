@@ -17,6 +17,8 @@ export const env = createEnv({
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
+    NOTION_TOKEN: z.string().optional(),
+    NOTION_ADVISORS_DATABASE_ID: z.string().optional(),
   },
 
   /**
@@ -38,6 +40,8 @@ export const env = createEnv({
     AUTH_DISCORD_SECRET: process.env.AUTH_DISCORD_SECRET,
     DATABASE_URL: process.env.DATABASE_URL,
     NODE_ENV: process.env.NODE_ENV,
+    NOTION_TOKEN: process.env.NOTION_TOKEN,
+    NOTION_ADVISORS_DATABASE_ID: process.env.NOTION_ADVISORS_DATABASE_ID,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially

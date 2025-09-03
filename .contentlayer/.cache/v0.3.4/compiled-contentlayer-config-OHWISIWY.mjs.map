@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../contentlayer.config.ts"],
+  "sourcesContent": ["import { defineDatabase, makeSource } from \"contentlayer-source-notion\";\nimport * as notion from \"@notionhq/client\";\n\nconst client = new notion.Client({ \n  auth: process.env.NOTION_TOKEN \n});\n\nexport const Member = defineDatabase(() => ({\n  name: \"Member\",\n  databaseId: process.env.NOTION_ADVISORS_DATABASE_ID || \"1ee64024306a4714af57320fc8ca6834\",\n}));\n\nexport default makeSource({\n  client,\n  databaseTypes: [Member],\n});\n"],
+  "mappings": ";AAAA,SAAS,gBAAgB,kBAAkB;AAC3C,YAAY,YAAY;AAExB,IAAM,SAAS,IAAW,cAAO;AAAA,EAC/B,MAAM,QAAQ,IAAI;AACpB,CAAC;AAEM,IAAM,SAAS,eAAe,OAAO;AAAA,EAC1C,MAAM;AAAA,EACN,YAAY,QAAQ,IAAI,+BAA+B;AACzD,EAAE;AAEF,IAAO,8BAAQ,WAAW;AAAA,EACxB;AAAA,EACA,eAAe,CAAC,MAAM;AACxB,CAAC;",
+  "names": []
+}
