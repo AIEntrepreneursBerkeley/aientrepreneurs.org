@@ -37,10 +37,10 @@ const visualCarouselItems = [
   {
     id: "5",
     image: "/images/pearvc-event3.jpg",
-    title: "AI Startup Showcase",
+    title: "Demo Day",
     description:
-      "Showcasing the latest innovations from our incubator companies",
-    category: "Showcase",
+      "Our semester demo day where incubator companies pitch their latest innovations",
+    category: "Demo Day",
   },
   {
     id: "6",
@@ -87,17 +87,12 @@ export default function EcosystemPage() {
             <div className="container px-4">
               <div className="mx-auto max-w-7xl">
                 <div className="mb-12 text-center">
-                  <div className="mb-4 inline-flex items-center rounded-full bg-gradient-to-r from-blue-600/10 to-purple-600/10 px-4 py-2">
-                    <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
-                      📸 Community Highlights
-                    </span>
-                  </div>
                   <h2 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-white">
-                    AIEB in Pictures
+                    AIEB in Pictures 📸
                   </h2>
                   <p className="mx-auto max-w-2xl text-xl font-medium text-gray-600 dark:text-gray-300">
-                    Capturing the energy, innovation, and connections that drive
-                    our community forward
+                    From late-night hackathons to demo days- here's what we've
+                    been up to
                   </p>
                 </div>
 
