@@ -82,24 +82,26 @@ export default function EcosystemPage() {
           <Lines />
           <div className="bg-stripe-gradient absolute top-0 -z-10 size-full scale-y-200 md:top-10" />
 
-          {/* Hero Section with Visual Carousel */}
-          <section className="relative pt-20 pb-16 md:pt-24 md:pb-20">
+          {/* AIEB in Pictures Section */}
+          <section className="relative pt-8 pb-12">
             <div className="container px-4">
-              <div className="mx-auto mb-16 max-w-4xl text-center">
-                <div className="border-foreground/10 border-y border-dashed py-8">
-                  <h1 className="mb-6 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl dark:text-white">
-                    AIEB Visually
-                  </h1>
-                  <p className="mx-auto max-w-2xl text-lg leading-8 text-gray-600 dark:text-gray-300">
-                    Experience our community through moments that define us —
-                    from groundbreaking events to innovative collaborations that
-                    shape the future of AI entrepreneurship.
+              <div className="mx-auto max-w-7xl">
+                <div className="mb-12 text-center">
+                  <div className="mb-4 inline-flex items-center rounded-full bg-gradient-to-r from-blue-600/10 to-purple-600/10 px-4 py-2">
+                    <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
+                      📸 Community Highlights
+                    </span>
+                  </div>
+                  <h2 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-white">
+                    AIEB in Pictures
+                  </h2>
+                  <p className="mx-auto max-w-2xl text-xl font-medium text-gray-600 dark:text-gray-300">
+                    Capturing the energy, innovation, and connections that drive
+                    our community forward
                   </p>
                 </div>
-              </div>
 
-              {/* Visual Carousel */}
-              <div className="mx-auto max-w-7xl">
+                {/* Visual Carousel */}
                 <VisualCarousel
                   items={visualCarouselItems}
                   autoplay={true}
