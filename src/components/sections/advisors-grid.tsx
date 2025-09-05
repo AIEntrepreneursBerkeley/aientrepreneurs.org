@@ -51,11 +51,27 @@ export function AdvisorsGrid({ advisors }: { advisors: AdvisorsGridItem[] }) {
               )}
             </figure>
             <div className="min-w-0 flex-1">
-              <h3 className="truncate text-lg font-semibold text-gray-900 dark:text-white">
+              <h3
+                className="text-lg font-semibold text-gray-900 dark:text-white"
+                style={{
+                  display: "-webkit-box",
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
+                }}
+              >
                 {advisor.name}
               </h3>
               {advisor.roles[0] && (
-                <p className="truncate text-base text-gray-600 dark:text-gray-400">
+                <p
+                  className="text-base text-gray-600 dark:text-gray-400"
+                  style={{
+                    display: "-webkit-box",
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                  }}
+                >
                   {advisor.roles[0]}
                 </p>
               )}
