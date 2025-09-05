@@ -78,9 +78,9 @@ export default function EcosystemPage() {
         />
       </Head>
       <Layout>
-        <main className="relative flex flex-col">
+        <main className="relative flex flex-col overflow-hidden">
           <Lines />
-          <div className="bg-stripe-gradient absolute top-0 -z-10 size-full scale-y-200 md:top-10" />
+          <div className="bg-stripe-gradient pointer-events-none absolute inset-0 -z-10" />
 
           {/* AIEB in Pictures Section */}
           <section className="relative pt-8 pb-12">
@@ -110,12 +110,6 @@ export default function EcosystemPage() {
           <section className="border-foreground/10 relative border-t border-dashed py-20">
             <div className="container px-4">
               <div className="mx-auto max-w-7xl">
-                <div className="mb-12 text-center">
-                  <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
-                    By the Numbers
-                  </h3>
-                </div>
-
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                   <div className="group relative overflow-hidden rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-blue-600/20 p-12 text-center backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-blue-500/40">
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -133,7 +127,7 @@ export default function EcosystemPage() {
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     <div className="relative">
                       <div className="mb-4 text-6xl font-bold text-purple-600 dark:text-purple-400">
-                        200+
+                        500+
                       </div>
                       <div className="text-2xl font-semibold text-gray-900 dark:text-white">
                         Community Members
@@ -145,7 +139,7 @@ export default function EcosystemPage() {
                     <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     <div className="relative">
                       <div className="mb-4 text-6xl font-bold text-green-600 dark:text-green-400">
-                        30+
+                        50+
                       </div>
                       <div className="text-2xl font-semibold text-gray-900 dark:text-white">
                         Startups Incubated
@@ -157,7 +151,7 @@ export default function EcosystemPage() {
                     <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     <div className="relative">
                       <div className="mb-4 text-6xl font-bold text-orange-600 dark:text-orange-400">
-                        15+
+                        30+
                       </div>
                       <div className="text-2xl font-semibold text-gray-900 dark:text-white">
                         VC Partners
@@ -169,86 +163,362 @@ export default function EcosystemPage() {
             </div>
           </section>
 
-          {/* Upcoming Events */}
+          {/* Selected Founders */}
           <section className="border-foreground/10 relative border-t border-dashed py-16">
             <div className="container px-4">
               <div className="mx-auto max-w-7xl">
-                <div className="mb-12 text-center">
-                  <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
-                    Upcoming Events
-                  </h2>
-                  <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-                    Join us at our next gathering
-                  </p>
-                </div>
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                  {/* Founder Card 1 */}
+                  <div className="group hover:shadow-3xl relative overflow-hidden rounded-2xl border border-gray-800/50 bg-gray-900/50 shadow-2xl backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]">
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
-                <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl dark:border-gray-800 dark:bg-gray-900">
-                  <div className="relative aspect-[16/9] w-full">
-                    <iframe
-                      src="https://lu.ma/embed-calendar/blank"
-                      className="h-full w-full"
-                      title="AIEB Events"
-                      loading="lazy"
-                      allow="fullscreen"
-                    />
+                      {/* Placeholder for founder image */}
+                      <div className="flex h-full items-center justify-center bg-gradient-to-br from-blue-500/10 to-purple-500/10">
+                        <div className="text-6xl">👨‍💼</div>
+                      </div>
+
+                      {/* Company Badge */}
+                      <div className="absolute top-4 left-4">
+                        <span className="inline-flex items-center rounded-full bg-blue-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                          AI Startup
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-6">
+                      <h4 className="mb-2 text-xl font-bold text-white">
+                        Alex Chen
+                      </h4>
+                      <p className="mb-3 font-medium text-blue-400">
+                        Founder & CEO, NeuralFlow
+                      </p>
+                      <p className="mb-4 text-sm leading-relaxed text-gray-300">
+                        Building the next generation of AI-powered workflow
+                        automation. Previously at Google AI, Stanford CS '22.
+                      </p>
+                      <div className="flex items-center text-xs text-gray-400">
+                        <span className="rounded-full bg-gray-800 px-2 py-1">
+                          AIEB Cohort 2023
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Founder Card 2 */}
+                  <div className="group hover:shadow-3xl relative overflow-hidden rounded-2xl border border-gray-800/50 bg-gray-900/50 shadow-2xl backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]">
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-green-600/20 to-teal-600/20" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+
+                      {/* Placeholder for founder image */}
+                      <div className="flex h-full items-center justify-center bg-gradient-to-br from-green-500/10 to-teal-500/10">
+                        <div className="text-6xl">👩‍💼</div>
+                      </div>
+
+                      {/* Company Badge */}
+                      <div className="absolute top-4 left-4">
+                        <span className="inline-flex items-center rounded-full bg-green-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                          HealthTech
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-6">
+                      <h4 className="mb-2 text-xl font-bold text-white">
+                        Sarah Kim
+                      </h4>
+                      <p className="mb-3 font-medium text-green-400">
+                        Co-founder, MedAI Labs
+                      </p>
+                      <p className="mb-4 text-sm leading-relaxed text-gray-300">
+                        Revolutionizing medical diagnosis with computer vision.
+                        Former researcher at UCSF, Berkeley EECS '21.
+                      </p>
+                      <div className="flex items-center text-xs text-gray-400">
+                        <span className="rounded-full bg-gray-800 px-2 py-1">
+                          AIEB Cohort 2022
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Founder Card 3 */}
+                  <div className="group hover:shadow-3xl relative overflow-hidden rounded-2xl border border-gray-800/50 bg-gray-900/50 shadow-2xl backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]">
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+
+                      {/* Placeholder for founder image */}
+                      <div className="flex h-full items-center justify-center bg-gradient-to-br from-purple-500/10 to-pink-500/10">
+                        <div className="text-6xl">👨‍💼</div>
+                      </div>
+
+                      {/* Company Badge */}
+                      <div className="absolute top-4 left-4">
+                        <span className="inline-flex items-center rounded-full bg-purple-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                          FinTech
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-6">
+                      <h4 className="mb-2 text-xl font-bold text-white">
+                        Marcus Rodriguez
+                      </h4>
+                      <p className="mb-3 font-medium text-purple-400">
+                        Founder, CryptoSense AI
+                      </p>
+                      <p className="mb-4 text-sm leading-relaxed text-gray-300">
+                        AI-driven cryptocurrency trading platform. Ex-Goldman
+                        Sachs quant, Berkeley Haas MBA '23.
+                      </p>
+                      <div className="flex items-center text-xs text-gray-400">
+                        <span className="rounded-full bg-gray-800 px-2 py-1">
+                          AIEB Cohort 2023
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Founder Card 4 */}
+                  <div className="group hover:shadow-3xl relative overflow-hidden rounded-2xl border border-gray-800/50 bg-gray-900/50 shadow-2xl backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]">
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-orange-600/20 to-red-600/20" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+
+                      {/* Placeholder for founder image */}
+                      <div className="flex h-full items-center justify-center bg-gradient-to-br from-orange-500/10 to-red-500/10">
+                        <div className="text-6xl">👩‍💼</div>
+                      </div>
+
+                      {/* Company Badge */}
+                      <div className="absolute top-4 left-4">
+                        <span className="inline-flex items-center rounded-full bg-orange-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                          EdTech
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-6">
+                      <h4 className="mb-2 text-xl font-bold text-white">
+                        Priya Patel
+                      </h4>
+                      <p className="mb-3 font-medium text-orange-400">
+                        CEO, LearnLab AI
+                      </p>
+                      <p className="mb-4 text-sm leading-relaxed text-gray-300">
+                        Personalized AI tutoring for K-12 students. Former
+                        product manager at Khan Academy, Stanford MS '22.
+                      </p>
+                      <div className="flex items-center text-xs text-gray-400">
+                        <span className="rounded-full bg-gray-800 px-2 py-1">
+                          AIEB Cohort 2024
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Founder Card 5 */}
+                  <div className="group hover:shadow-3xl relative overflow-hidden rounded-2xl border border-gray-800/50 bg-gray-900/50 shadow-2xl backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]">
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-blue-600/20" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+
+                      {/* Placeholder for founder image */}
+                      <div className="flex h-full items-center justify-center bg-gradient-to-br from-cyan-500/10 to-blue-500/10">
+                        <div className="text-6xl">👨‍💼</div>
+                      </div>
+
+                      {/* Company Badge */}
+                      <div className="absolute top-4 left-4">
+                        <span className="inline-flex items-center rounded-full bg-cyan-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                          Climate Tech
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-6">
+                      <h4 className="mb-2 text-xl font-bold text-white">
+                        David Liu
+                      </h4>
+                      <p className="mb-3 font-medium text-cyan-400">
+                        Co-founder, GreenGrid AI
+                      </p>
+                      <p className="mb-4 text-sm leading-relaxed text-gray-300">
+                        AI-optimized smart grid technology for renewable energy.
+                        PhD candidate in Energy Systems, Berkeley '24.
+                      </p>
+                      <div className="flex items-center text-xs text-gray-400">
+                        <span className="rounded-full bg-gray-800 px-2 py-1">
+                          AIEB Cohort 2024
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Founder Card 6 */}
+                  <div className="group hover:shadow-3xl relative overflow-hidden rounded-2xl border border-gray-800/50 bg-gray-900/50 shadow-2xl backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]">
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 to-purple-600/20" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+
+                      {/* Placeholder for founder image */}
+                      <div className="flex h-full items-center justify-center bg-gradient-to-br from-indigo-500/10 to-purple-500/10">
+                        <div className="text-6xl">👩‍💼</div>
+                      </div>
+
+                      {/* Company Badge */}
+                      <div className="absolute top-4 left-4">
+                        <span className="inline-flex items-center rounded-full bg-indigo-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                          Robotics
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-6">
+                      <h4 className="mb-2 text-xl font-bold text-white">
+                        Emma Zhang
+                      </h4>
+                      <p className="mb-3 font-medium text-indigo-400">
+                        Founder, RoboVision
+                      </p>
+                      <p className="mb-4 text-sm leading-relaxed text-gray-300">
+                        Computer vision for autonomous warehouse robots. Former
+                        Tesla Autopilot engineer, Berkeley EECS '20.
+                      </p>
+                      <div className="flex items-center text-xs text-gray-400">
+                        <span className="rounded-full bg-gray-800 px-2 py-1">
+                          AIEB Cohort 2022
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Directory Section */}
-          <section
-            id="directory"
-            className="border-foreground/10 relative border-t border-dashed py-16"
-          >
+          {/* Selected Partners */}
+          <section className="border-foreground/10 relative border-t border-dashed pt-16 pb-8">
             <div className="container px-4">
-              <div className="mx-auto max-w-7xl">
-                <div className="mb-12 text-center">
-                  <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
-                    Community Directory
-                  </h2>
-                  <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-                    Connect with founders, investors, and innovators in our
-                    ecosystem
-                  </p>
+              <div className="mx-auto max-w-6xl">
+                <div className="mb-8 flex items-end justify-between">
+                  <div>
+                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+                      Selected Partners
+                    </h2>
+                  </div>
                 </div>
 
-                <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl dark:border-gray-800 dark:bg-gray-900">
-                  <div className="border-b border-gray-200 bg-gray-50 px-6 py-4 dark:border-gray-800 dark:bg-gray-800">
-                    <div className="flex flex-wrap gap-2">
-                      <button className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none">
-                        All
-                      </button>
-                      <button className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600">
-                        Startups
-                      </button>
-                      <button className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600">
-                        Investors
-                      </button>
-                      <button className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600">
-                        Alumni
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="p-8">
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                      <div className="rounded-xl border-2 border-dashed border-gray-300 p-8 text-center transition-colors hover:border-blue-500 dark:border-gray-600 dark:hover:border-blue-400">
-                        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-600">
-                          <span className="text-lg font-bold text-white">
-                            🚀
-                          </span>
-                        </div>
-                        <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                          Directory Coming Soon
-                        </h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">
-                          We&apos;re building a comprehensive directory to
-                          connect our entire ecosystem
-                        </p>
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  {/* Partner 1 */}
+                  <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:bg-white/10">
+                    <div className="mb-6 flex justify-center">
+                      <div className="flex h-24 w-40 items-center justify-center rounded-lg border border-blue-500/30 bg-gradient-to-r from-blue-500/20 to-purple-500/20">
+                        <span className="text-3xl font-bold text-blue-400">
+                          A16Z
+                        </span>
                       </div>
                     </div>
+                    <h4 className="mb-2 text-lg font-semibold text-white">
+                      Andreessen Horowitz
+                    </h4>
+                    <p className="text-sm leading-relaxed text-gray-300">
+                      Leading venture capital firm providing funding and
+                      mentorship to our portfolio companies.
+                    </p>
+                  </div>
+
+                  {/* Partner 2 */}
+                  <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:bg-white/10">
+                    <div className="mb-6 flex justify-center">
+                      <div className="flex h-24 w-40 items-center justify-center rounded-lg border border-green-500/30 bg-gradient-to-r from-green-500/20 to-teal-500/20">
+                        <span className="text-2xl font-bold text-green-400">
+                          OpenAI
+                        </span>
+                      </div>
+                    </div>
+                    <h4 className="mb-2 text-lg font-semibold text-white">
+                      OpenAI
+                    </h4>
+                    <p className="text-sm leading-relaxed text-gray-300">
+                      Strategic AI partnership providing cutting-edge models and
+                      technical expertise to our startups.
+                    </p>
+                  </div>
+
+                  {/* Partner 3 */}
+                  <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:bg-white/10">
+                    <div className="mb-6 flex justify-center">
+                      <div className="flex h-24 w-40 items-center justify-center rounded-lg border border-purple-500/30 bg-gradient-to-r from-purple-500/20 to-pink-500/20">
+                        <span className="text-2xl font-bold text-purple-400">
+                          Microsoft
+                        </span>
+                      </div>
+                    </div>
+                    <h4 className="mb-2 text-lg font-semibold text-white">
+                      Microsoft
+                    </h4>
+                    <p className="text-sm leading-relaxed text-gray-300">
+                      Cloud infrastructure and Azure credits supporting our
+                      founders' technical development needs.
+                    </p>
+                  </div>
+
+                  {/* Partner 4 */}
+                  <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:bg-white/10">
+                    <div className="mb-6 flex justify-center">
+                      <div className="flex h-24 w-40 items-center justify-center rounded-lg border border-orange-500/30 bg-gradient-to-r from-orange-500/20 to-red-500/20">
+                        <span className="text-2xl font-bold text-orange-400">
+                          Y Comb
+                        </span>
+                      </div>
+                    </div>
+                    <h4 className="mb-2 text-lg font-semibold text-white">
+                      Y Combinator
+                    </h4>
+                    <p className="text-sm leading-relaxed text-gray-300">
+                      Accelerator partnership offering demo day opportunities
+                      and investor network access.
+                    </p>
+                  </div>
+
+                  {/* Partner 5 */}
+                  <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:bg-white/10">
+                    <div className="mb-6 flex justify-center">
+                      <div className="flex h-24 w-40 items-center justify-center rounded-lg border border-cyan-500/30 bg-gradient-to-r from-cyan-500/20 to-blue-500/20">
+                        <span className="text-2xl font-bold text-cyan-400">
+                          Berkeley
+                        </span>
+                      </div>
+                    </div>
+                    <h4 className="mb-2 text-lg font-semibold text-white">
+                      UC Berkeley
+                    </h4>
+                    <p className="text-sm leading-relaxed text-gray-300">
+                      Academic partnership providing research collaboration and
+                      student talent pipeline.
+                    </p>
+                  </div>
+
+                  {/* Partner 6 */}
+                  <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:bg-white/10">
+                    <div className="mb-6 flex justify-center">
+                      <div className="flex h-24 w-40 items-center justify-center rounded-lg border border-indigo-500/30 bg-gradient-to-r from-indigo-500/20 to-purple-500/20">
+                        <span className="text-2xl font-bold text-indigo-400">
+                          Sequoia
+                        </span>
+                      </div>
+                    </div>
+                    <h4 className="mb-2 text-lg font-semibold text-white">
+                      Sequoia Capital
+                    </h4>
+                    <p className="text-sm leading-relaxed text-gray-300">
+                      Investment partner supporting Series A and growth-stage
+                      funding for our alumni companies.
+                    </p>
                   </div>
                 </div>
               </div>
