@@ -107,40 +107,61 @@ export default function EcosystemPage() {
           </section>
 
           {/* Community Stats */}
-          <section className="border-foreground/10 relative border-t border-dashed py-16">
+          <section className="border-foreground/10 relative border-t border-dashed py-20">
             <div className="container px-4">
               <div className="mx-auto max-w-7xl">
+                <div className="mb-12 text-center">
+                  <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
+                    By the Numbers
+                  </h3>
+                </div>
+
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                  <div className="text-center">
-                    <div className="mb-2 text-4xl font-bold text-blue-600 dark:text-blue-400">
-                      50+
-                    </div>
-                    <div className="text-gray-600 dark:text-gray-300">
-                      Events Hosted
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="mb-2 text-4xl font-bold text-purple-600 dark:text-purple-400">
-                      200+
-                    </div>
-                    <div className="text-gray-600 dark:text-gray-300">
-                      Community Members
+                  <div className="group relative overflow-hidden rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-blue-600/20 p-12 text-center backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-blue-500/40">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    <div className="relative">
+                      <div className="mb-4 text-6xl font-bold text-blue-600 dark:text-blue-400">
+                        50+
+                      </div>
+                      <div className="text-2xl font-semibold text-gray-900 dark:text-white">
+                        Events Hosted
+                      </div>
                     </div>
                   </div>
-                  <div className="text-center">
-                    <div className="mb-2 text-4xl font-bold text-green-600 dark:text-green-400">
-                      30+
-                    </div>
-                    <div className="text-gray-600 dark:text-gray-300">
-                      Startups Incubated
+
+                  <div className="group relative overflow-hidden rounded-2xl border border-purple-500/20 bg-gradient-to-br from-purple-500/10 to-purple-600/20 p-12 text-center backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-purple-500/40">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    <div className="relative">
+                      <div className="mb-4 text-6xl font-bold text-purple-600 dark:text-purple-400">
+                        200+
+                      </div>
+                      <div className="text-2xl font-semibold text-gray-900 dark:text-white">
+                        Community Members
+                      </div>
                     </div>
                   </div>
-                  <div className="text-center">
-                    <div className="mb-2 text-4xl font-bold text-orange-600 dark:text-orange-400">
-                      15+
+
+                  <div className="group relative overflow-hidden rounded-2xl border border-green-500/20 bg-gradient-to-br from-green-500/10 to-green-600/20 p-12 text-center backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-green-500/40">
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    <div className="relative">
+                      <div className="mb-4 text-6xl font-bold text-green-600 dark:text-green-400">
+                        30+
+                      </div>
+                      <div className="text-2xl font-semibold text-gray-900 dark:text-white">
+                        Startups Incubated
+                      </div>
                     </div>
-                    <div className="text-gray-600 dark:text-gray-300">
-                      VC Partners
+                  </div>
+
+                  <div className="group relative overflow-hidden rounded-2xl border border-orange-500/20 bg-gradient-to-br from-orange-500/10 to-orange-600/20 p-12 text-center backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-orange-500/40">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    <div className="relative">
+                      <div className="mb-4 text-6xl font-bold text-orange-600 dark:text-orange-400">
+                        15+
+                      </div>
+                      <div className="text-2xl font-semibold text-gray-900 dark:text-white">
+                        VC Partners
+                      </div>
                     </div>
                   </div>
                 </div>
