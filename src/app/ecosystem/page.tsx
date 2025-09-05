@@ -91,8 +91,8 @@ export default function EcosystemPage() {
                     AIEB in Pictures 📸
                   </h2>
                   <p className="mx-auto max-w-2xl text-xl font-medium text-gray-600 dark:text-gray-300">
-                    From late-night hackathons to demo days- here's what we've
-                    been up to
+                    From late-night hackathons to demo days- here&rsquo;s what
+                    we&rsquo;ve been up to
                   </p>
                 </div>
 
@@ -196,7 +196,8 @@ export default function EcosystemPage() {
                       </p>
                       <p className="mb-4 text-sm leading-relaxed text-gray-300">
                         Building the next generation of AI-powered workflow
-                        automation. Previously at Google AI, Stanford CS '22.
+                        automation. Previously at Google AI, Stanford CS
+                        &rsquo;22.
                       </p>
                       <div className="flex items-center text-xs text-gray-400">
                         <span className="rounded-full bg-gray-800 px-2 py-1">
@@ -234,7 +235,7 @@ export default function EcosystemPage() {
                       </p>
                       <p className="mb-4 text-sm leading-relaxed text-gray-300">
                         Revolutionizing medical diagnosis with computer vision.
-                        Former researcher at UCSF, Berkeley EECS '21.
+                        Former researcher at UCSF, Berkeley EECS &rsquo;21.
                       </p>
                       <div className="flex items-center text-xs text-gray-400">
                         <span className="rounded-full bg-gray-800 px-2 py-1">
@@ -272,7 +273,7 @@ export default function EcosystemPage() {
                       </p>
                       <p className="mb-4 text-sm leading-relaxed text-gray-300">
                         AI-driven cryptocurrency trading platform. Ex-Goldman
-                        Sachs quant, Berkeley Haas MBA '23.
+                        Sachs quant, Berkeley Haas MBA &rsquo;23.
                       </p>
                       <div className="flex items-center text-xs text-gray-400">
                         <span className="rounded-full bg-gray-800 px-2 py-1">
@@ -310,7 +311,7 @@ export default function EcosystemPage() {
                       </p>
                       <p className="mb-4 text-sm leading-relaxed text-gray-300">
                         Personalized AI tutoring for K-12 students. Former
-                        product manager at Khan Academy, Stanford MS '22.
+                        product manager at Khan Academy, Stanford MS &rsquo;22.
                       </p>
                       <div className="flex items-center text-xs text-gray-400">
                         <span className="rounded-full bg-gray-800 px-2 py-1">
@@ -348,7 +349,7 @@ export default function EcosystemPage() {
                       </p>
                       <p className="mb-4 text-sm leading-relaxed text-gray-300">
                         AI-optimized smart grid technology for renewable energy.
-                        PhD candidate in Energy Systems, Berkeley '24.
+                        PhD candidate in Energy Systems, Berkeley &rsquo;24.
                       </p>
                       <div className="flex items-center text-xs text-gray-400">
                         <span className="rounded-full bg-gray-800 px-2 py-1">
@@ -386,7 +387,7 @@ export default function EcosystemPage() {
                       </p>
                       <p className="mb-4 text-sm leading-relaxed text-gray-300">
                         Computer vision for autonomous warehouse robots. Former
-                        Tesla Autopilot engineer, Berkeley EECS '20.
+                        Tesla Autopilot engineer, Berkeley EECS &rsquo;20.
                       </p>
                       <div className="flex items-center text-xs text-gray-400">
                         <span className="rounded-full bg-gray-800 px-2 py-1">
@@ -463,7 +464,7 @@ export default function EcosystemPage() {
                     </h4>
                     <p className="text-sm leading-relaxed text-gray-300">
                       Cloud infrastructure and Azure credits supporting our
-                      founders' technical development needs.
+                      founders&rsquo; technical development needs.
                     </p>
                   </div>
 
