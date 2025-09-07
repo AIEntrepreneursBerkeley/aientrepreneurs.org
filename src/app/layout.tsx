@@ -48,8 +48,7 @@ export default function RootLayout({
         <SplashCursor />
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
-          enableSystem
+          forcedTheme="dark"
           disableTransitionOnChange
         >
           {children}

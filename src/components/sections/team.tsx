@@ -10,6 +10,18 @@ const Team = () => (
         linkedin={"https://www.linkedin.com/in/jyotiinar/"}
       />
       <Card
+        name={"Dhruv Kulkarni"}
+        image={"/images/dhruv.jpg"}
+        position={"Exec"}
+        linkedin={"https://www.linkedin.com/in/jyotiinar/"}
+      />
+      <Card
+        name={"Anaiy Somalwar"}
+        image={"/images/anaiy.jpg"}
+        position={"Exec"}
+        linkedin={"https://www.linkedin.com/in/jyotiinar/"}
+      />
+      <Card
         name={"Vardaan Tekriwal"}
         image={"/images/vardaan.jpg"}
         position={"Exec"}
