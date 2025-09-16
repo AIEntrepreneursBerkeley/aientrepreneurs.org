@@ -2,6 +2,7 @@ import { Layout } from "~/components/layouts/layout";
 import { Lines } from "~/components/sections/lines";
 import { VisualCarousel } from "~/components/ui/visual-carousel";
 import Head from "next/head";
+import Image from "next/image";
 
 // Placeholder data for the visual carousel
 const visualCarouselItems = [
@@ -167,231 +168,353 @@ export default function EcosystemPage() {
           <section className="border-foreground/10 relative border-t border-dashed py-16">
             <div className="container px-4">
               <div className="mx-auto max-w-7xl">
+                <div className="mb-8">
+                  <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+                    Selected Founders
+                  </h2>
+                </div>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                  {/* Founder Card 1 */}
+                  {/* Founder Card 1: Ghita Houir Alami — ZeroEntropy */}
                   <div className="group hover:shadow-3xl relative overflow-hidden rounded-2xl border border-gray-800/50 bg-gray-900/50 shadow-2xl backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]">
                     <div className="relative aspect-[4/3] overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20" />
+                      <Image
+                        src="/images/ghita alami.jpeg"
+                        alt="Ghita Houir Alami — ZeroEntropy"
+                        fill
+                        className="object-cover object-[center_top]"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-
-                      {/* Placeholder for founder image */}
-                      <div className="flex h-full items-center justify-center bg-gradient-to-br from-blue-500/10 to-purple-500/10">
-                        <div className="text-6xl">👨‍💼</div>
-                      </div>
-
-                      {/* Company Badge */}
+                      {/* Cohort Badge */}
                       <div className="absolute top-4 left-4">
                         <span className="inline-flex items-center rounded-full bg-blue-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
-                          AI Startup
+                          Cohort 1
                         </span>
                       </div>
                     </div>
 
                     <div className="p-6">
                       <h4 className="mb-2 text-xl font-bold text-white">
-                        Alex Chen
+                        Ghita Houir Alami
                       </h4>
                       <p className="mb-3 font-medium text-blue-400">
-                        Founder & CEO, NeuralFlow
+                        Co-founder & CEO, ZeroEntropy
                       </p>
-                      <p className="mb-4 text-sm leading-relaxed text-gray-300">
-                        Building the next generation of AI-powered workflow
-                        automation. Previously at Google AI, Stanford CS
-                        &rsquo;22.
-                      </p>
+                      <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
+                        <li>$4.2M seed led by Initialized Capital</li>
+                        <li>YC W25</li>
+                        <li>
+                          Launched zerank-1; ~100M docs/~1M queries processed
+                        </li>
+                      </ul>
                       <div className="flex items-center text-xs text-gray-400">
                         <span className="rounded-full bg-gray-800 px-2 py-1">
-                          AIEB Cohort 2023
+                          AIEB Founder
                         </span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Founder Card 2 */}
+                  {/* Founder Card 2: Ethan Hou — Martin */}
                   <div className="group hover:shadow-3xl relative overflow-hidden rounded-2xl border border-gray-800/50 bg-gray-900/50 shadow-2xl backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]">
                     <div className="relative aspect-[4/3] overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-green-600/20 to-teal-600/20" />
+                      <Image
+                        src="/images/ethan.jpg"
+                        alt="Ethan Hou — Martin"
+                        fill
+                        className="object-cover object-top"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-
-                      {/* Placeholder for founder image */}
-                      <div className="flex h-full items-center justify-center bg-gradient-to-br from-green-500/10 to-teal-500/10">
-                        <div className="text-6xl">👩‍💼</div>
-                      </div>
-
-                      {/* Company Badge */}
+                      {/* Cohort Badge */}
                       <div className="absolute top-4 left-4">
-                        <span className="inline-flex items-center rounded-full bg-green-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
-                          HealthTech
+                        <span className="inline-flex items-center rounded-full bg-blue-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                          Cohort 1
                         </span>
                       </div>
                     </div>
 
                     <div className="p-6">
                       <h4 className="mb-2 text-xl font-bold text-white">
-                        Sarah Kim
+                        Ethan Hou
                       </h4>
                       <p className="mb-3 font-medium text-green-400">
-                        Co-founder, MedAI Labs
+                        Co-founder, Martin (YC S23)
                       </p>
-                      <p className="mb-4 text-sm leading-relaxed text-gray-300">
-                        Revolutionizing medical diagnosis with computer vision.
-                        Former researcher at UCSF, Berkeley EECS &rsquo;21.
-                      </p>
+                      <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
+                        <li>YC S23</li>
+                        <li>Agentic workflows/dev tooling</li>
+                        <li>Rapid shipping cadence</li>
+                      </ul>
                       <div className="flex items-center text-xs text-gray-400">
                         <span className="rounded-full bg-gray-800 px-2 py-1">
-                          AIEB Cohort 2022
+                          AIEB Founder
                         </span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Founder Card 3 */}
+                  {/* Founder Card 3: Dhruv Kulkarni — Brutus */}
                   <div className="group hover:shadow-3xl relative overflow-hidden rounded-2xl border border-gray-800/50 bg-gray-900/50 shadow-2xl backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]">
                     <div className="relative aspect-[4/3] overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20" />
+                      <Image
+                        src="/images/dhruv.jpg"
+                        alt="Dhruv Kulkarni — Brutus"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-
-                      {/* Placeholder for founder image */}
-                      <div className="flex h-full items-center justify-center bg-gradient-to-br from-purple-500/10 to-pink-500/10">
-                        <div className="text-6xl">👨‍💼</div>
-                      </div>
-
-                      {/* Company Badge */}
+                      {/* Cohort Badge */}
                       <div className="absolute top-4 left-4">
-                        <span className="inline-flex items-center rounded-full bg-purple-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
-                          FinTech
+                        <span className="inline-flex items-center rounded-full bg-blue-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                          Cohort 1
                         </span>
                       </div>
                     </div>
 
                     <div className="p-6">
                       <h4 className="mb-2 text-xl font-bold text-white">
-                        Marcus Rodriguez
+                        Dhruv Kulkarni
                       </h4>
                       <p className="mb-3 font-medium text-purple-400">
-                        Founder, CryptoSense AI
+                        Co-founder, Brutus
                       </p>
-                      <p className="mb-4 text-sm leading-relaxed text-gray-300">
-                        AI-driven cryptocurrency trading platform. Ex-Goldman
-                        Sachs quant, Berkeley Haas MBA &rsquo;23.
-                      </p>
+                      <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
+                        <li>Founder at Brutus</li>
+                        <li>Early paid traction</li>
+                        <li>AI-native product experiences</li>
+                      </ul>
                       <div className="flex items-center text-xs text-gray-400">
                         <span className="rounded-full bg-gray-800 px-2 py-1">
-                          AIEB Cohort 2023
+                          AIEB Founder
                         </span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Founder Card 4 */}
+                  {/* Founder Card 4: Pedro — Advex */}
                   <div className="group hover:shadow-3xl relative overflow-hidden rounded-2xl border border-gray-800/50 bg-gray-900/50 shadow-2xl backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]">
                     <div className="relative aspect-[4/3] overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-orange-600/20 to-red-600/20" />
+                      <Image
+                        src="/images/pedro.jpg"
+                        alt="Pedro — Advex"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-
-                      {/* Placeholder for founder image */}
-                      <div className="flex h-full items-center justify-center bg-gradient-to-br from-orange-500/10 to-red-500/10">
-                        <div className="text-6xl">👩‍💼</div>
-                      </div>
-
-                      {/* Company Badge */}
+                      {/* Cohort Badge */}
                       <div className="absolute top-4 left-4">
-                        <span className="inline-flex items-center rounded-full bg-orange-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
-                          EdTech
+                        <span className="inline-flex items-center rounded-full bg-green-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                          Cohort 2
                         </span>
                       </div>
                     </div>
 
                     <div className="p-6">
                       <h4 className="mb-2 text-xl font-bold text-white">
-                        Priya Patel
+                        Pedro Pachuca
                       </h4>
                       <p className="mb-3 font-medium text-orange-400">
-                        CEO, LearnLab AI
+                        Co-founder, Advex
                       </p>
-                      <p className="mb-4 text-sm leading-relaxed text-gray-300">
-                        Personalized AI tutoring for K-12 students. Former
-                        product manager at Khan Academy, Stanford MS &rsquo;22.
-                      </p>
+                      <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
+                        <li>$3.5M seed</li>
+                        <li>Backed by top investors</li>
+                        <li>AI infrastructure</li>
+                      </ul>
                       <div className="flex items-center text-xs text-gray-400">
                         <span className="rounded-full bg-gray-800 px-2 py-1">
-                          AIEB Cohort 2024
+                          AIEB Founder
                         </span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Founder Card 5 */}
+                  {/* Founder Card 5: Yoonseok Yang — Pensieve */}
                   <div className="group hover:shadow-3xl relative overflow-hidden rounded-2xl border border-gray-800/50 bg-gray-900/50 shadow-2xl backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]">
                     <div className="relative aspect-[4/3] overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-blue-600/20" />
+                      <Image
+                        src="/images/yoonseok_yang.jpeg"
+                        alt="Yoonseok Yang — Pensieve"
+                        fill
+                        className="object-cover object-top"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-
-                      {/* Placeholder for founder image */}
-                      <div className="flex h-full items-center justify-center bg-gradient-to-br from-cyan-500/10 to-blue-500/10">
-                        <div className="text-6xl">👨‍💼</div>
-                      </div>
-
-                      {/* Company Badge */}
+                      {/* Cohort Badge */}
                       <div className="absolute top-4 left-4">
-                        <span className="inline-flex items-center rounded-full bg-cyan-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
-                          Climate Tech
+                        <span className="inline-flex items-center rounded-full bg-purple-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                          Cohort 3
                         </span>
                       </div>
                     </div>
 
                     <div className="p-6">
                       <h4 className="mb-2 text-xl font-bold text-white">
-                        David Liu
+                        Yoonseok Yang
                       </h4>
                       <p className="mb-3 font-medium text-cyan-400">
-                        Co-founder, GreenGrid AI
+                        Founder, Pensieve
                       </p>
-                      <p className="mb-4 text-sm leading-relaxed text-gray-300">
-                        AI-optimized smart grid technology for renewable energy.
-                        PhD candidate in Energy Systems, Berkeley &rsquo;24.
-                      </p>
+                      <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
+                        <li>Founder at Pensieve</li>
+                        <li>Announced enterprise collaboration</li>
+                        <li>AI-first product development</li>
+                      </ul>
                       <div className="flex items-center text-xs text-gray-400">
                         <span className="rounded-full bg-gray-800 px-2 py-1">
-                          AIEB Cohort 2024
+                          AIEB Founder
                         </span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Founder Card 6 */}
+                  {/* Founder Card 6: Sean Dorje — Relixr */}
                   <div className="group hover:shadow-3xl relative overflow-hidden rounded-2xl border border-gray-800/50 bg-gray-900/50 shadow-2xl backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]">
                     <div className="relative aspect-[4/3] overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 to-purple-600/20" />
+                      <Image
+                        src="/images/sean_dorje.jpeg"
+                        alt="Sean Dorje — Relixr"
+                        fill
+                        className="object-cover object-[center_top]"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-
-                      {/* Placeholder for founder image */}
-                      <div className="flex h-full items-center justify-center bg-gradient-to-br from-indigo-500/10 to-purple-500/10">
-                        <div className="text-6xl">👩‍💼</div>
-                      </div>
-
-                      {/* Company Badge */}
+                      {/* Cohort Badge */}
                       <div className="absolute top-4 left-4">
-                        <span className="inline-flex items-center rounded-full bg-indigo-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
-                          Robotics
+                        <span className="inline-flex items-center rounded-full bg-green-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                          Cohort 2
                         </span>
                       </div>
                     </div>
 
                     <div className="p-6">
                       <h4 className="mb-2 text-xl font-bold text-white">
-                        Emma Zhang
+                        Sean Dorje
                       </h4>
                       <p className="mb-3 font-medium text-indigo-400">
-                        Founder, RoboVision
+                        Founder, Relixr
                       </p>
-                      <p className="mb-4 text-sm leading-relaxed text-gray-300">
-                        Computer vision for autonomous warehouse robots. Former
-                        Tesla Autopilot engineer, Berkeley EECS &rsquo;20.
-                      </p>
+                      <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
+                        <li>$150k ARR in 2 weeks</li>
+                        <li>Founder at Relixr</li>
+                        <li>Rapid customer-driven iteration</li>
+                      </ul>
                       <div className="flex items-center text-xs text-gray-400">
                         <span className="rounded-full bg-gray-800 px-2 py-1">
-                          AIEB Cohort 2022
+                          AIEB Founder
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Santi — Autograph */}
+                  <div className="group hover:shadow-3xl relative overflow-hidden rounded-2xl border border-gray-800/50 bg-gray-900/50 shadow-2xl backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]">
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <Image
+                        src="/images/santi_racca.jpeg"
+                        alt="Santi Racca — Autograph"
+                        fill
+                        className="object-cover object-[center_top]"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                      <div className="absolute top-4 left-4">
+                        <span className="inline-flex items-center rounded-full bg-green-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                          Cohort 2
+                        </span>
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <h4 className="mb-2 text-xl font-bold text-white">
+                        Santi Racca
+                      </h4>
+                      <p className="mb-3 font-medium text-pink-400">
+                        Founder, Autograph
+                      </p>
+                      <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
+                        <li>AI-native creator tooling</li>
+                        <li>Ecosystem growth</li>
+                        <li>Rapid shipping cadence</li>
+                      </ul>
+                      <div className="flex items-center text-xs text-gray-400">
+                        <span className="rounded-full bg-gray-800 px-2 py-1">
+                          AIEB Founder
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Tienlan — Foresight Health */}
+                  <div className="group hover:shadow-3xl relative overflow-hidden rounded-2xl border border-gray-800/50 bg-gray-900/50 shadow-2xl backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]">
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <Image
+                        src="/images/tienlan_sun.jpeg"
+                        alt="Tienlan Sun — Foresight Health"
+                        fill
+                        className="object-cover object-[center_top]"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                      <div className="absolute top-4 left-4">
+                        <span className="inline-flex items-center rounded-full bg-green-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                          Cohort 2
+                        </span>
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <h4 className="mb-2 text-xl font-bold text-white">
+                        Tienlan Sun
+                      </h4>
+                      <p className="mb-3 font-medium text-emerald-400">
+                        Founder & CEO, Foresight Health
+                      </p>
+                      <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
+                        <li>YC W25</li>
+                        <li>Healthcare AI platform</li>
+                        <li>Mentored by Masayoshi Son</li>
+                      </ul>
+                      <div className="flex items-center text-xs text-gray-400">
+                        <span className="rounded-full bg-gray-800 px-2 py-1">
+                          AIEB Founder
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Pierre — Phospho */}
+                  <div className="group hover:shadow-3xl relative overflow-hidden rounded-2xl border border-gray-800/50 bg-gray-900/50 shadow-2xl backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]">
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <Image
+                        src="/images/pierre-louis_biojout.jpeg"
+                        alt="Pierre-Louis Biojout — Phospho"
+                        fill
+                        className="object-cover object-top"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                      <div className="absolute top-4 left-4">
+                        <span className="inline-flex items-center rounded-full bg-green-600/90 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                          Cohort 2
+                        </span>
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <h4 className="mb-2 text-xl font-bold text-white">
+                        Pierre-Louis Biojout
+                      </h4>
+                      <p className="mb-3 font-medium text-indigo-400">
+                        Co-founder, Phospho
+                      </p>
+                      <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
+                        <li>Natural language robotics control</li>
+                        <li>Real-world prototypes</li>
+                        <li>Technical founding team</li>
+                      </ul>
+                      <div className="flex items-center text-xs text-gray-400">
+                        <span className="rounded-full bg-gray-800 px-2 py-1">
+                          AIEB Founder
                         </span>
                       </div>
                     </div>
