@@ -1,8 +1,21 @@
+"use client";
+
 import { Layout } from "~/components/layouts/layout";
 import { Lines } from "~/components/sections/lines";
+import { Button } from "~/components/ui/primitives/button";
 import { VisualCarousel } from "~/components/ui/visual-carousel";
 import Head from "next/head";
 import Image from "next/image";
+
+// Helper function to handle image error fallback
+const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+  const target = e.currentTarget;
+  target.style.display = "none";
+  const nextElement = target.nextElementSibling as HTMLElement;
+  if (nextElement) {
+    nextElement.style.display = "block";
+  }
+};
 
 // Placeholder data for the visual carousel
 const visualCarouselItems = [
@@ -92,8 +105,8 @@ export default function EcosystemPage() {
                     AIEB in Pictures 📸
                   </h2>
                   <p className="mx-auto max-w-2xl text-xl font-medium text-gray-600 dark:text-gray-300">
-                    From late-night hackathons to demo days- here&rsquo;s what
-                    we&rsquo;ve been up to
+                    From late-night hackathons to demo days- here&apos;s what
+                    we&apos;ve been up to
                   </p>
                 </div>
 
@@ -437,7 +450,7 @@ export default function EcosystemPage() {
                       </p>
                       <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
                         <li>Backed by Neo & Susa Ventures</li>
-                        <li>AI for early Alzheimer's diagnosis</li>
+                        <li>AI for early Alzheimer&apos;s diagnosis</li>
                         <li>Mentored by Masayoshi Son</li>
                       </ul>
                     </div>
@@ -480,126 +493,441 @@ export default function EcosystemPage() {
             </div>
           </section>
 
-          {/* Selected Partners */}
+          {/* Collaborators */}
           <section className="border-foreground/10 relative border-t border-dashed pt-16 pb-8">
             <div className="container px-4">
-              <div className="mx-auto max-w-6xl">
-                <div className="mb-8 flex items-end justify-between">
-                  <div>
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
-                      Selected Partners
-                    </h2>
-                  </div>
+              <div className="mx-auto max-w-7xl">
+                <div className="mb-12 text-center">
+                  <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+                    Our Collaborators
+                  </h2>
                 </div>
 
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                  {/* Partner 1 */}
-                  <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:bg-white/10">
-                    <div className="mb-6 flex justify-center">
-                      <div className="flex h-24 w-40 items-center justify-center rounded-lg border border-blue-500/30 bg-gradient-to-r from-blue-500/20 to-purple-500/20">
-                        <span className="text-3xl font-bold text-blue-400">
-                          A16Z
-                        </span>
+                {/* Partner Logos Grid */}
+                <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+                  {/* Sequoia */}
+                  <a
+                    href="https://www.sequoiacap.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/images/sequoia.png"
+                      alt="Sequoia Capital"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                    <div className="hidden text-center">
+                      <div className="text-xs font-semibold text-white">
+                        SEQUOIA
                       </div>
+                      <div className="text-xs text-gray-400">Capital</div>
                     </div>
-                    <h4 className="mb-2 text-lg font-semibold text-white">
-                      Andreessen Horowitz
-                    </h4>
-                    <p className="text-sm leading-relaxed text-gray-300">
-                      Leading venture capital firm providing funding and
-                      mentorship to our portfolio companies.
-                    </p>
-                  </div>
+                  </a>
 
-                  {/* Partner 2 */}
-                  <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:bg-white/10">
-                    <div className="mb-6 flex justify-center">
-                      <div className="flex h-24 w-40 items-center justify-center rounded-lg border border-green-500/30 bg-gradient-to-r from-green-500/20 to-teal-500/20">
-                        <span className="text-2xl font-bold text-green-400">
-                          OpenAI
-                        </span>
+                  {/* Lightspeed */}
+                  <a
+                    href="https://www.lsvp.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/images/lightspeed.png"
+                      alt="Lightspeed Venture Partners"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                    <div className="hidden text-center">
+                      <div className="text-sm font-semibold text-white">
+                        Lightspeed
                       </div>
                     </div>
-                    <h4 className="mb-2 text-lg font-semibold text-white">
-                      OpenAI
-                    </h4>
-                    <p className="text-sm leading-relaxed text-gray-300">
-                      Strategic AI partnership providing cutting-edge models and
-                      technical expertise to our startups.
-                    </p>
-                  </div>
+                  </a>
 
-                  {/* Partner 3 */}
-                  <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:bg-white/10">
-                    <div className="mb-6 flex justify-center">
-                      <div className="flex h-24 w-40 items-center justify-center rounded-lg border border-purple-500/30 bg-gradient-to-r from-purple-500/20 to-pink-500/20">
-                        <span className="text-2xl font-bold text-purple-400">
-                          Microsoft
-                        </span>
+                  {/* Greylock */}
+                  <a
+                    href="https://www.greylock.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/images/greylock.png"
+                      alt="Greylock Partners"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                    <div className="hidden text-center">
+                      <div className="text-sm font-semibold text-white">
+                        greylock
                       </div>
                     </div>
-                    <h4 className="mb-2 text-lg font-semibold text-white">
-                      Microsoft
-                    </h4>
-                    <p className="text-sm leading-relaxed text-gray-300">
-                      Cloud infrastructure and Azure credits supporting our
-                      founders&rsquo; technical development needs.
-                    </p>
-                  </div>
+                  </a>
 
-                  {/* Partner 4 */}
-                  <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:bg-white/10">
-                    <div className="mb-6 flex justify-center">
-                      <div className="flex h-24 w-40 items-center justify-center rounded-lg border border-orange-500/30 bg-gradient-to-r from-orange-500/20 to-red-500/20">
-                        <span className="text-2xl font-bold text-orange-400">
-                          Y Comb
-                        </span>
+                  {/* Kleiner Perkins */}
+                  <a
+                    href="https://www.kleinerperkins.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/images/kleiner.png"
+                      alt="Kleiner Perkins"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                    <div className="hidden text-center">
+                      <div className="text-xs font-semibold text-white">
+                        KLEINER
                       </div>
+                      <div className="text-xs text-gray-400">PERKINS</div>
                     </div>
-                    <h4 className="mb-2 text-lg font-semibold text-white">
-                      Y Combinator
-                    </h4>
-                    <p className="text-sm leading-relaxed text-gray-300">
-                      Accelerator partnership offering demo day opportunities
-                      and investor network access.
-                    </p>
-                  </div>
+                  </a>
 
-                  {/* Partner 5 */}
-                  <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:bg-white/10">
-                    <div className="mb-6 flex justify-center">
-                      <div className="flex h-24 w-40 items-center justify-center rounded-lg border border-cyan-500/30 bg-gradient-to-r from-cyan-500/20 to-blue-500/20">
-                        <span className="text-2xl font-bold text-cyan-400">
-                          Berkeley
-                        </span>
-                      </div>
-                    </div>
-                    <h4 className="mb-2 text-lg font-semibold text-white">
-                      UC Berkeley
-                    </h4>
-                    <p className="text-sm leading-relaxed text-gray-300">
-                      Academic partnership providing research collaboration and
-                      student talent pipeline.
-                    </p>
-                  </div>
+                  {/* Emerson Collective */}
+                  <a
+                    href="https://www.emersoncollective.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/images/emerson.png"
+                      alt="Emerson Collective"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                  </a>
 
-                  {/* Partner 6 */}
-                  <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:bg-white/10">
-                    <div className="mb-6 flex justify-center">
-                      <div className="flex h-24 w-40 items-center justify-center rounded-lg border border-indigo-500/30 bg-gradient-to-r from-indigo-500/20 to-purple-500/20">
-                        <span className="text-2xl font-bold text-indigo-400">
-                          Sequoia
-                        </span>
+                  {/* Clear Ventures */}
+                  <a
+                    href="https://www.clearventures.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/images/clear.png"
+                      alt="Clear Ventures"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                  </a>
+
+                  {/* FutureX Capital */}
+                  <a
+                    href="https://www.futurexcapital.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/logos/futurexcapital.png"
+                      alt="FutureX Capital"
+                      width={160}
+                      height={60}
+                      className="h-12 w-auto object-contain brightness-0 invert filter"
+                    />
+                  </a>
+
+                  {/* Entrepreneurship @ Berkeley Haas */}
+                  <a
+                    href="https://entrepreneurship.berkeley.edu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/logos/haas_entr.png"
+                      alt="Entrepreneurship @ Berkeley Haas"
+                      width={160}
+                      height={60}
+                      className="h-12 w-auto object-contain"
+                    />
+                  </a>
+
+                  {/* Orrick */}
+                  <a
+                    href="https://www.orrick.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/images/orrick.png"
+                      alt="Orrick"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                    <div className="hidden text-center">
+                      <div className="text-sm font-semibold text-white">
+                        orrick
                       </div>
                     </div>
-                    <h4 className="mb-2 text-lg font-semibold text-white">
-                      Sequoia Capital
-                    </h4>
-                    <p className="text-sm leading-relaxed text-gray-300">
-                      Investment partner supporting Series A and growth-stage
-                      funding for our alumni companies.
-                    </p>
-                  </div>
+                  </a>
+
+                  {/* ByteDance */}
+                  <a
+                    href="https://www.bytedance.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/images/bytedance.png"
+                      alt="ByteDance"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                    <div className="hidden text-center">
+                      <div className="text-sm font-semibold text-white">
+                        ByteDance
+                      </div>
+                    </div>
+                  </a>
+
+                  {/* Anthropic */}
+                  <a
+                    href="https://www.anthropic.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/images/anthropic.png"
+                      alt="Anthropic"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                  </a>
+
+                  {/* Z Fellows */}
+                  <a
+                    href="https://www.zfellows.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/images/zfellows.png"
+                      alt="Z Fellows"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                  </a>
+
+                  {/* The House Fund */}
+                  <a
+                    href="https://www.thehouse.fund"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/logos/the-house-fund.svg"
+                      alt="The House Fund"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                  </a>
+
+                  {/* Antler */}
+                  <a
+                    href="https://www.antler.co"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/logos/antler.svg"
+                      alt="Antler"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                  </a>
+
+                  {/* Unusual Ventures */}
+                  <a
+                    href="https://www.unusualventures.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/logos/unusual-ventures.svg"
+                      alt="Unusual Ventures"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                  </a>
+
+                  {/* Remus Capital */}
+                  <a
+                    href="https://www.remuscapital.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/images/remus.png"
+                      alt="Remus Capital"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                  </a>
+
+                  {/* Pear */}
+                  <a
+                    href="https://www.pear.vc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/logos/pearvc.svg"
+                      alt="Pear VC"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                  </a>
+
+                  {/* Human Capital */}
+                  <a
+                    href="https://www.humancapital.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/images/human.png"
+                      alt="Human Capital"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                  </a>
+
+                  {/* Andreessen Horowitz */}
+                  <a
+                    href="https://a16z.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/logos/a16z.svg"
+                      alt="Andreessen Horowitz"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                  </a>
+
+                  {/* Y Combinator */}
+                  <a
+                    href="https://www.ycombinator.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/logos/y-combinator.svg"
+                      alt="Y Combinator"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain brightness-0 invert filter"
+                    />
+                  </a>
+
+                  {/* OpenAI */}
+                  <a
+                    href="https://openai.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/logos/openai.svg"
+                      alt="OpenAI"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain brightness-0 invert filter"
+                    />
+                  </a>
+
+                  {/* Microsoft */}
+                  <a
+                    href="https://microsoft.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/logos/microsoft.png"
+                      alt="Microsoft"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                  </a>
+
+                  {/* NFX */}
+                  <a
+                    href="https://www.nfx.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-20 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10"
+                  >
+                    <Image
+                      src="/logos/nfx.svg"
+                      alt="NFX"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Call to Action */}
+          <section className="border-foreground/10 relative border-t border-dashed py-32">
+            <div className="container px-4">
+              <div className="mx-auto max-w-4xl text-center">
+                <h2 className="mb-12 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-white">
+                  Ready to Build the Future?
+                </h2>
+                <div className="flex justify-center">
+                  <Button
+                    asChild
+                    className="rounded-xl bg-blue-600 px-12 py-6 text-xl font-semibold text-white hover:bg-blue-700"
+                  >
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSeczWIYO9PKcUJVRSHdIt4z6mt2XkQ2lgcBySjiA5IdLnxoWA/viewform"
+                      target="_blank"
+                    >
+                      Apply Now
+                    </a>
+                  </Button>
                 </div>
               </div>
             </div>
