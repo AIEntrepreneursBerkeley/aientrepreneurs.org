@@ -202,16 +202,9 @@ export default function EcosystemPage() {
                       </p>
                       <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
                         <li>$4.2M seed led by Initialized Capital</li>
-                        <li>YC W25</li>
-                        <li>
-                          Launched zerank-1; ~100M docs/~1M queries processed
-                        </li>
+                        <li>YC W25 graduate</li>
+                        <li>100M+ documents processed, 1M+ queries served</li>
                       </ul>
-                      <div className="flex items-center text-xs text-gray-400">
-                        <span className="rounded-full bg-gray-800 px-2 py-1">
-                          AIEB Founder
-                        </span>
-                      </div>
                     </div>
                   </div>
 
@@ -222,7 +215,8 @@ export default function EcosystemPage() {
                         src="/images/ethan.jpg"
                         alt="Ethan Hou — Martin"
                         fill
-                        className="object-cover object-top"
+                        className="object-cover"
+                        style={{ objectPosition: "center 15%" }}
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
@@ -242,15 +236,10 @@ export default function EcosystemPage() {
                         Co-founder, Martin (YC S23)
                       </p>
                       <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
-                        <li>YC S23</li>
-                        <li>Agentic workflows/dev tooling</li>
-                        <li>Rapid shipping cadence</li>
+                        <li>$2M seed funding</li>
+                        <li>YC S23 graduate</li>
+                        <li>10,000+ active users</li>
                       </ul>
-                      <div className="flex items-center text-xs text-gray-400">
-                        <span className="rounded-full bg-gray-800 px-2 py-1">
-                          AIEB Founder
-                        </span>
-                      </div>
                     </div>
                   </div>
 
@@ -281,15 +270,10 @@ export default function EcosystemPage() {
                         Co-founder, Brutus
                       </p>
                       <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
-                        <li>Founder at Brutus</li>
-                        <li>Early paid traction</li>
-                        <li>AI-native product experiences</li>
+                        <li>Backed by Pear VC</li>
+                        <li>Acquired by Forta Health</li>
+                        <li>No-code AI software platform</li>
                       </ul>
-                      <div className="flex items-center text-xs text-gray-400">
-                        <span className="rounded-full bg-gray-800 px-2 py-1">
-                          AIEB Founder
-                        </span>
-                      </div>
                     </div>
                   </div>
 
@@ -320,15 +304,10 @@ export default function EcosystemPage() {
                         Co-founder, Advex
                       </p>
                       <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
-                        <li>$3.5M seed</li>
-                        <li>Backed by top investors</li>
-                        <li>AI infrastructure</li>
+                        <li>$3.5M seed round</li>
+                        <li>Backed by Pear VC</li>
+                        <li>TechCrunch Disrupt 2024 Top 20 Finalist</li>
                       </ul>
-                      <div className="flex items-center text-xs text-gray-400">
-                        <span className="rounded-full bg-gray-800 px-2 py-1">
-                          AIEB Founder
-                        </span>
-                      </div>
                     </div>
                   </div>
 
@@ -339,7 +318,8 @@ export default function EcosystemPage() {
                         src="/images/yoonseok_yang.jpeg"
                         alt="Yoonseok Yang — Pensieve"
                         fill
-                        className="object-cover object-top"
+                        className="object-cover"
+                        style={{ objectPosition: "center 15%" }}
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
@@ -359,15 +339,10 @@ export default function EcosystemPage() {
                         Founder, Pensieve
                       </p>
                       <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
-                        <li>Founder at Pensieve</li>
-                        <li>Announced enterprise collaboration</li>
-                        <li>AI-first product development</li>
+                        <li>Partnership with Anthropic</li>
+                        <li>50% reduction in grading time</li>
+                        <li>Deployed at Columbia, UC Berkeley, Harvey Mudd</li>
                       </ul>
-                      <div className="flex items-center text-xs text-gray-400">
-                        <span className="rounded-full bg-gray-800 px-2 py-1">
-                          AIEB Founder
-                        </span>
-                      </div>
                     </div>
                   </div>
 
@@ -398,15 +373,10 @@ export default function EcosystemPage() {
                         Founder, Relixr
                       </p>
                       <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
-                        <li>$150k ARR in 2 weeks</li>
-                        <li>Founder at Relixr</li>
-                        <li>Rapid customer-driven iteration</li>
+                        <li>$150k ARR achieved in 2 weeks</li>
+                        <li>YC X25</li>
+                        <li>Exceptional customer acquisition velocity</li>
                       </ul>
-                      <div className="flex items-center text-xs text-gray-400">
-                        <span className="rounded-full bg-gray-800 px-2 py-1">
-                          AIEB Founder
-                        </span>
-                      </div>
                     </div>
                   </div>
                   {/* Santi — Autograph */}
@@ -434,15 +404,10 @@ export default function EcosystemPage() {
                         Founder, Autograph
                       </p>
                       <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
-                        <li>AI-native creator tooling</li>
-                        <li>Ecosystem growth</li>
-                        <li>Rapid shipping cadence</li>
+                        <li>$2.6M raised</li>
+                        <li>AI-powered digital legacy platform</li>
+                        <li>Preserving human stories & memories</li>
                       </ul>
-                      <div className="flex items-center text-xs text-gray-400">
-                        <span className="rounded-full bg-gray-800 px-2 py-1">
-                          AIEB Founder
-                        </span>
-                      </div>
                     </div>
                   </div>
 
@@ -471,15 +436,10 @@ export default function EcosystemPage() {
                         Founder & CEO, Foresight Health
                       </p>
                       <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
-                        <li>YC W25</li>
-                        <li>Healthcare AI platform</li>
+                        <li>Backed by Neo & Susa Ventures</li>
+                        <li>AI for early Alzheimer's diagnosis</li>
                         <li>Mentored by Masayoshi Son</li>
                       </ul>
-                      <div className="flex items-center text-xs text-gray-400">
-                        <span className="rounded-full bg-gray-800 px-2 py-1">
-                          AIEB Founder
-                        </span>
-                      </div>
                     </div>
                   </div>
 
@@ -490,7 +450,8 @@ export default function EcosystemPage() {
                         src="/images/pierre-louis_biojout.jpeg"
                         alt="Pierre-Louis Biojout — Phospho"
                         fill
-                        className="object-cover object-top"
+                        className="object-cover"
+                        style={{ objectPosition: "center 20%" }}
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
@@ -508,15 +469,10 @@ export default function EcosystemPage() {
                         Co-founder, Phospho
                       </p>
                       <ul className="mb-4 list-disc pl-5 text-sm leading-relaxed text-gray-300">
-                        <li>Natural language robotics control</li>
-                        <li>Real-world prototypes</li>
-                        <li>Technical founding team</li>
+                        <li>$1.7M pre-seed raised</li>
+                        <li>YC W24 graduate</li>
+                        <li>2,000+ robots using phosphobot</li>
                       </ul>
-                      <div className="flex items-center text-xs text-gray-400">
-                        <span className="rounded-full bg-gray-800 px-2 py-1">
-                          AIEB Founder
-                        </span>
-                      </div>
                     </div>
                   </div>
                 </div>
