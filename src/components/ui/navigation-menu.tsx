@@ -35,7 +35,7 @@ export const NavigationMenuComponent = () => (
 
       <NavigationMenu.Item>
         <NavigationMenu.Link
-          className="navigation-menu-trigger"
+          className="navigation-menu-trigger h-full"
           href="/ecosystem"
         >
           Ecosystem
