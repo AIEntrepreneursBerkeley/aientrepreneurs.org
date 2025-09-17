@@ -34,6 +34,15 @@ export const NavigationMenuComponent = () => (
       </NavigationMenu.Item> */}
 
       <NavigationMenu.Item>
+        <NavigationMenu.Link
+          className="navigation-menu-trigger"
+          href="/ecosystem"
+        >
+          Ecosystem
+        </NavigationMenu.Link>
+      </NavigationMenu.Item>
+
+      <NavigationMenu.Item>
         <NavigationMenu.Trigger className="navigation-menu-trigger">
           About <ChevronDown className="caret-down" aria-hidden />
         </NavigationMenu.Trigger>

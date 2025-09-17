@@ -2,7 +2,7 @@ import Image from "next/image";
 import ocf from "public/logos/ocf.png";
 
 export const Footer = () => (
-  <footer className="mb-24">
+  <footer className="mt-24">
     <div className="flex w-full justify-center">
       <a
         className="px-2"
