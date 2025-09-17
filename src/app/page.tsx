@@ -2,6 +2,7 @@ import { Layout } from "~/components/layouts/layout";
 import { About } from "~/components/sections/about";
 import { CTA } from "~/components/sections/cta";
 import { Hero } from "~/components/sections/hero";
+import { Showcase } from "~/components/sections/showcase";
 import Team from "~/components/sections/team";
 import { Prism } from "~/components/ui/prism";
 import { auth } from "~/server/auth";

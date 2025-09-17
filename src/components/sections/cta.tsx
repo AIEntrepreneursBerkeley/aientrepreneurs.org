@@ -6,7 +6,7 @@ export const CTA = () => (
     <div className="relative container h-[1000px] px-0">
       <div className="relative h-full w-full">
         <Prism
-          animationType="hover"
+          animationType="rotate"
           timeScale={0.5}
           height={3.5}
           baseWidth={5}
