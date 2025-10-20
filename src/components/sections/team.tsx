@@ -4,6 +4,12 @@ const Team = () => (
   <section className="relative pb-6 md:pb-8">
     <div className="xs:grid-cols-2 container mt-8 grid grid-cols-1 gap-x-3.5 gap-y-6 px-4 md:grid-cols-3 lg:grid-cols-4">
       <Card
+        name={"Rohan Sontakke"}
+        image={"/images/rohan.jpg"}
+        position={"President"}
+        linkedin={"https://www.linkedin.com/in/rohan-sontakke-rss/"}
+      />
+      <Card
         name={"Jyoti Rani"}
         image={"/images/jyoti.jpg"}
         position={"President"}
@@ -50,12 +56,6 @@ const Team = () => (
         image={"/images/ari.jpg"}
         position={"Exec"}
         linkedin={"https://www.linkedin.com/in/ari-ramsan/"}
-      />
-      <Card
-        name={"Rohan Sontakke"}
-        image={"/images/rohan.jpg"}
-        position={"Exec"}
-        linkedin={"https://www.linkedin.com/in/rohan-sontakke-rss/"}
       />
       <Card
         name={"Diya Girish Kumar"}
