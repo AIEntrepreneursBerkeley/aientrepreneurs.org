@@ -7,7 +7,7 @@
 5. ```bash
    pnpm install
    ```
-6. Populate `.env` following `.env.example` (request environment variables from Anthony)
+6. Populate `.env` following `.env.example` (request environment variables from Anthony or Alex)
 7. ```bash
    ./start-database.sh
    ```
