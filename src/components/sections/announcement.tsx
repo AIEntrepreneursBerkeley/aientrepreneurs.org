@@ -169,11 +169,11 @@ export const Announcement = () => (
         <div className="text-center">
           <a
             className="inline-block w-full text-xs font-medium text-white transition-colors hover:text-gray-200 sm:text-sm"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeczWIYO9PKcUJVRSHdIt4z6mt2XkQ2lgcBySjiA5IdLnxoWA/viewform"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdcX1zDFSwJPZQzOXwtnnYjZIs6VtScYPSHrgzdz6KRNviADA/viewform?usp=dialog"
             target="_blank"
           >
             <span className="font-bold">
-              Fall 2025 Application is now open &rarr;
+              Spring 2026 Application is now open &rarr;
             </span>
           </a>
         </div>

@@ -49,7 +49,7 @@ export const NavigationMenuComponent = () => (
         <NavigationMenu.Content className="navigation-menu-content">
           <ul className="list one">
             <ListItem title="Team" href="/team">
-              Members and Advisors
+              Executive Board
             </ListItem>
             <ListItem title="FAQ" href="/faq">
               Frequently Asked Questions

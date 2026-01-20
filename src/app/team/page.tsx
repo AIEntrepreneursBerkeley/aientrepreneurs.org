@@ -1,5 +1,5 @@
 import { Layout } from "~/components/layouts/layout";
-import AdvisorsSection from "~/components/sections/advisors";
+// import AdvisorsSection from "~/components/sections/advisors";
 import { Lines } from "~/components/sections/lines";
 import Team from "~/components/sections/team";
 import Head from "next/head";
@@ -33,8 +33,8 @@ const TeamPage = () => (
         </div>
       </section>
 
-      {/* Advisors */}
-      <section className="relative border-t border-gray-200 bg-gray-50 pt-12 pb-16 dark:border-gray-800 dark:bg-gray-900/50">
+      {/* Advisors - Hidden */}
+      {/* <section className="relative border-t border-gray-200 bg-gray-50 pt-12 pb-16 dark:border-gray-800 dark:bg-gray-900/50">
         <div className="container px-4">
           <div className="mx-auto max-w-7xl">
             <div className="mb-6 flex items-end justify-between">
@@ -50,7 +50,7 @@ const TeamPage = () => (
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   </>
 );

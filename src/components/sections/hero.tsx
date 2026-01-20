@@ -29,7 +29,7 @@ export const Hero = () => (
             Propel your startup to the next level.{" "}
             <a
               target="_blank"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeczWIYO9PKcUJVRSHdIt4z6mt2XkQ2lgcBySjiA5IdLnxoWA/viewform"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdcX1zDFSwJPZQzOXwtnnYjZIs6VtScYPSHrgzdz6KRNviADA/viewform?usp=dialog"
               className="z-50 text-blue-500"
             >
               Apply

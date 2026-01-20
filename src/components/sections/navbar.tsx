@@ -20,7 +20,7 @@ export const Navbar = () => (
       <NavigationMenuComponent />
       <div className="xs:gap-2 flex scale-90 items-center gap-1 sm:scale-100 sm:gap-3 md:h-full">
         <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeczWIYO9PKcUJVRSHdIt4z6mt2XkQ2lgcBySjiA5IdLnxoWA/viewform"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdcX1zDFSwJPZQzOXwtnnYjZIs6VtScYPSHrgzdz6KRNviADA/viewform?usp=dialog"
           target="_blank"
         >
           <Button variant="default">Apply</Button>
